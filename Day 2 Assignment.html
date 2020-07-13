@@ -1,0 +1,63 @@
+<html>
+<head>
+
+<title> Day2 Assignment
+</title>
+</head>
+<body>
+<script  type="text/javascript">
+var today = new Date();
+var day = today.getDay();
+var daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
+document.write("Today is : " + daylist[day] + ".");
+document.write("<br>");
+var hour = today.getHours();
+var minute = today.getMinutes();
+var second = today.getSeconds();
+var prepand = (hour >= 12)? " PM ":" AM ";
+hour = (hour >= 12)? hour - 12: hour;
+if (hour===0 && prepand===' PM ') 
+{ 
+if (minute===0 && second===0)
+{ 
+ hour=12;
+  prepand=' Noon';
+  } 
+  else
+  { 
+  hour=12;
+  prepand=' PM';
+  } 
+  } 
+
+document.write("Current Time : "+hour + prepand + " : " + minute + " : " + second );
+document.write("<br>");
+
+var today = new Date();
+var date = today.getDate(); 
+
+document.write(date);
+document.write("/")
+
+
+var today = new Date();
+var month = today.getMonth(); 
+
+document.write(month);
+document.write("/")
+ 
+ today = new Date();
+var year = today.getFullYear();
+
+document.write(year);
+
+
+
+
+</script>
+<h1>print the content of current window</h1> <br>
+<button onclick="window.print()">print this page
+</button>
+
+</body>
+</html>
