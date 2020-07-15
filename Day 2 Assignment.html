@@ -1,63 +1,95 @@
 <html>
 <head>
-
-<title> Day2 Assignment
+<title> Day 2 Assignment 
 </title>
 </head>
 <body>
-<script  type="text/javascript">
-var today = new Date();
-var day = today.getDay();
-var daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
-document.write("Today is : " + daylist[day] + ".");
-document.write("<br>");
-var hour = today.getHours();
-var minute = today.getMinutes();
-var second = today.getSeconds();
-var prepand = (hour >= 12)? " PM ":" AM ";
-hour = (hour >= 12)? hour - 12: hour;
-if (hour===0 && prepand===' PM ') 
-{ 
-if (minute===0 && second===0)
-{ 
- hour=12;
-  prepand=' Noon';
-  } 
-  else
-  { 
-  hour=12;
-  prepand=' PM';
-  } 
-  } 
-
-document.write("Current Time : "+hour + prepand + " : " + minute + " : " + second );
-document.write("<br>");
-
-var today = new Date();
-var date = today.getDate(); 
-
-document.write(date);
-document.write("/")
-
-
-var today = new Date();
-var month = today.getMonth(); 
-
-document.write(month);
-document.write("/")
- 
- today = new Date();
-var year = today.getFullYear();
-
-document.write(year);
-
-
-
-
+<marquee> Day 2 Assignment</marquee>
+<h2> Question No.1 </h2>
+<h4>Write a js code which takes input from
+the user and logs it in the console.
+   </h4>
+<script type="text/javascript">
+ prompt("enter your age");
+ alert("page is opening");
+ confirm("Are you over 18");
+let str="Hii welcome to the page";
+console.log(str);
 </script>
-<h1>print the content of current window</h1> <br>
-<button onclick="window.print()">print this page
-</button>
 
+
+
+
+
+
+<mark> Question No.2 </mark>
+<h3>Explain with examples the remaining methods for strings and array.</h3>
+
+  <h4> remaining methods of string with example:</h4>
+ <script type="text/javascript">
+console.log(replace():      Searches a string for a specified value, or a regular expression, and returns a new string where the specified values are replaced
+example: );
+let  str = "Please visit Microsoft!";
+console.log(str.replace("Microsoft", "google"));
+
+console.log(search():       Searches a string for a specified value, or regular expression, and returns the position of the match
+example:);
+let str = "Please locate where 'locate' occurs!";
+console.log(str.search("locate"));
+
+console.log(slice():        Extracts a part of a string and returns a new string
+example:); 
+let str = "Apple, Banana, Kiwi";
+console.log(str.slice(7, 13));
+
+console.log(split():        Splits a string into an array of substrings
+example: )
+let txt = "a,b,c,d,e";  
+console.log(txt.split(","));                
+console.log(txt.split("|")); 
+
+Console.log(substring():    Extracts the characters from a string, between two specified indices
+example:)
+let str = "Apple, Banana, Kiwi";
+console.log(str.substring(7, 13));
+
+console.log(trim():         Removes whitespace from both ends of a string
+example:)
+var str = "       Hello World!        ";
+alert(str.trim());
+ 
+ console.log("remaining methods of array with example");
+ console.log("slice(): method slices out the rest of the array.
+ example:");
+ let fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+ console.log(fruits.slice(2));
+ 
+ console.log(" concat(): method can take any number of array arguments:
+ example:");
+ let arr1 = ["Emil", "Tobias", "Linus"];
+ console.log(arr1.concat("Peter")); 
+ 
+ console.log("splice(): method can be used to add new items to an array
+ example:");
+ let fruits = ["Banana", "Orange", "Apple", "Mango"];
+ console.log(fruits.splice(2, 0, "Lemon", "Kiwi"));
+ </script>
+
+
+
+
+
+
+
+<h1>Question No.3</h1>
+<script type="text/javascript">
+
+ prompt("enter your age");
+ if(age > 21){
+ document.write("<b>you can drink</b>");
+ } else{
+ document.write("<b>you can't drink</b>");
+ }
+</script>
 </body>
 </html>
