@@ -1,0 +1,98 @@
+<html>
+  <head>
+    <title> Day 3 Assignment
+    </title>
+  </head>
+  <body>
+     <script type="text/javascript">
+    console.log("Assignment No.1");
+    var no = +prompt("enter the number");
+    console.log("input:",no);
+ let evenodd =function(){
+  
+      if(no%2==0){
+        console.log("The entered number is",no,"Number is even");
+      }
+      else{
+        console.log("The entered number is",no,"Number is odd");
+      }
+    }
+   evenodd()
+ </script>
+ 
+ 
+ 
+ 
+ 
+  <script type="text/javascript">
+    console.log("Assignment No.2");
+    
+    var str=("Android 9");
+    console.log("input:",str);
+    var res=str.join("The OS name is");
+    console.log(res);
+   </script>
+ 
+ 
+ 
+ 
+ 
+<script type="text/javascript">
+   console.log("Assignment No.3");
+   
+   var no1=+prompt("enter your marks for conditional loop");
+   console.log("conditional loop:");
+      if(no1 >= 70){
+     console.log("marks are",no1,"Grade is A");
+     }
+       else if(no1 >= 40 && no1 < 70){
+    console.log("marks are",no1,"Grade is B");
+}
+ else{
+     console.log("marks are",no1,"Fail");
+ }
+</script>
+
+
+
+
+
+<script type="text/javascript">
+   console.log("switch case");
+   
+   var m=+prompt("enter your marks for switch case");
+   
+switch (m){
+     case (m>=70):
+        console.log("marks is",m,"Grade A");
+        break;
+    case (m>=40): 
+    case (m<70):
+        console.log("marks is",m,"Grade B");
+        break;
+    case (m<40):
+        console.log("marks is",m,"fail");
+        break;
+        default:
+        console.log("NAN");
+    
+}
+       
+</script> 
+    
+   
+   
+   
+   <script type="text/javascript">
+     
+     var nos=+prompt("enter a number for tenary");
+      console.log("tenary operator: ",nos);
+     
+   let result = (nos>=70) ? 'Grade A': 
+         (nos>=40 && nos<70) ? 'grade B':
+          'fail';
+
+console.log(result);
+   </script>
+   </body>
+</html>
