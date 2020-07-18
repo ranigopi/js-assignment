@@ -1,0 +1,271 @@
+
+<html> 
+ <head> 
+ <script>
+ function dis(val)
+  { 
+
+ document.getElementById("result").value+=val 
+ 
+  } 
+function solve() 
+{ 
+ let x = document.getElementById("result").value 
+ let y = eval(x) 
+ document.getElementById("result").value = y 
+ } 
+ function clr() 
+ { 
+document.getElementById("result").value = "" 
+} 
+ </script>
+ 
+ 
+<style>
+.title{ 
+margin-bottom: 10px; 
+text-align:center; 
+width: 210px; 
+color:green; 
+border: solid black 2px; 
+} 
+input[type="button"] 
+ { 
+         background-color:green; 
+         color: black;
+        border: solid black 2px; 
+         width:100%  } 
+ input[type="text"]
+         { 
+           background-color:white; 
+           border: solid black 2px; 
+           width:100% 
+         }
+
+</style> 
+ 
+
+</head> 
+<body> 
+<h3> Question No .4</h3> 
+  <h4> calculator: </h4>
+<div class = title > Calculator</div> 
+ <table border="1"> 
+ <tr> 
+ <td colspan="3"><input type="text" id="result"/></td> 
+<td><input type="button" value="c" onclick="clr()"> </td> 
+ </tr> 
+  <tr> 
+ <td><input type="button" value="1" onclick="dis('1')"> </td> 
+<td><input type="button" value="2" onclick="dis('2')"> </td> 
+<td><input type="button" value="3" onclick="dis('3')"> </td> 
+<td><input type="button" value="/" onclick="dis('/')"> </td> 
+</tr> 
+<tr> 
+<td><input type="button" value="4" onclick="dis('4')"> </td> 
+<td><input type="button" value="5" onclick="dis('5')"> </td> 
+<td><input type="button" value="6" onclick="dis('6')"> </td> 
+ <td><input type="button" value="-" onclick="dis('-')"> </td> 
+  </tr> 
+ <tr> 
+  <td><input type="button" value="7" onclick="dis('7')"> </td> 
+<td><input type="button" value="8" onclick="dis('8')"> </td> 
+ <td><input type="button" value="9" onclick="dis('9')"> </td> 
+ <td><input type="button" value="+" onclick="dis('+')"> </td> 
+</tr> 
+ <tr> 
+<td><input type="button" value="." onclick="dis('.')"> </td> 
+ <td><input type="button" value="0" onclick="dis('0')"> </td> 
+ <td><input type="button" value="=" onclick="solve()"> </td> 
+<td><input type="button" value="*" onclick="dis('*')"> </td> 
+  </tr> 
+  <tr>
+    <td> <input type="button" value="%" onclick="dis('%')"> </td>
+    <td> <input type="button" value="√"onclick="dis('√')"> </td>
+  </tr>
+  </table> 
+
+
+
+<h3> Question no .1 </h3>
+  <h4>create a loops that iteration upto 100 while oupting "fizz" at multiples of 3 "buzz" at multipe of 5 and "fizzbuzz" at multiple of 3 and 5</h4>
+  <script  type="text/javascript">
+console.log("Question No.1:");
+
+for (let i=1; i <= 100; i++){
+    if( i % 3 == 0 ){
+        console.log(i,"the output is fizz");
+        
+    }
+   if( i % 5 == 0 ){
+        console.log(i,"the output is buzz");
+        
+    }
+    if( ( i % 3 == 0 ) && ( i % 5 == 0 ) ){
+        console.log(i,"the output is fizzbuzz");
+    }
+}
+ </script>
+  
+  
+  
+  
+  <h3>  Question no .2</h3>
+  <h4> Destructure object</h4>
+  
+  <script  type="text/javascript"> 
+console.log("Question No.2:");
+
+const student = {
+  name: "Helsinki",
+  age: 24,
+  projects: {
+    Dicegame: "Two players dice game using javascript",
+  }
+}
+console.log("Destructure Object:");
+const {name , age , projects:{Dicegame}} = student;
+console.log(name, age, Dicegame);
+
+  </script>
+  
+  
+  
+  
+   <h3> Question no .3</h3>
+   <h4> imagine you are going out to do some grocery shopping. so you have an array called shoppinglist with all the products you want to buy.
+   Now that you are inside the shop.you have the basket with all the product from your list,but you want to add few one.create a new array called ShoppingBasket,that will the copy of the ShoppingListArray and add some product into it</h4>
+  
+  <script type="text/javascript">
+  
+console.log("Question No.3");
+
+let ShoppingList= ['Rice' ,  'Oil' , 
+
+'Milk' , 'Chocolate' , 'Icecream' , 
+
+'Orange'];
+
+console.log(ShoppingList);
+  
+    let ShoppingBasket = [
+      
+     ...ShoppingList, "Mango" ,"Banana"];
+  
+   ShoppingBasket.push("Apple");
+  
+   console.log(ShoppingBasket);
+   </script>
+ 
+ 
+ 
+ 
+ 
+  <h3> Question No .5 </h3>
+  <h4> sales department</h4>
+  <script text="text/javascript">
+  
+console.log("Question No.5");
+ var i= prompt ("enter your sales:");
+
+if(i < 0){
+ var i=prompt("please enter a valid number:");
+}
+if(i>=0 && i<=5000){
+    console.log(i,'The % of sales commission is 2%');
+    let A = Math.round(i* 0.02);
+    console.log("Total commission is:",A);
+    }
+else if(i > 5001 && i<=10000){
+    console.log(i,'The % of sales commission is 5%');
+    let b= Math.round(i * 0.05);
+    console.log("Total commission is:",b);
+}
+else if(i > 10001 && i <=20000){
+  console.log(i,'The % of sales commission is 7%');
+  let c = Math.round(i*0.07);
+  console.log("Total commission is:",c);
+}
+else if (i > 20000){
+  console.log(i,"The % of commission is 10%");
+  let d =Math.round( i * 0.1);
+  console.log("Total commission is:",d);
+   }
+   </script>
+    
+    
+    
+     
+<h3> Question No .6 </h3>
+  <h4>enter a number which is greater than 100 </h4>
+  
+   <script  text="text/javascript">
+console.log("Question No.6");
+var i = prompt("enter a Number:");
+
+while(i<100){
+  var i=prompt("please enter a number which is greater than 100");
+  if(i>=100){
+  console.log("The number is",i);
+  } 
+}
+
+     </script>
+     
+     
+     
+     <h3> Question No.7</h3>
+     <h4> prime or not</h4>
+     <script type="text/javascript">
+console.log("Question no 7")
+var n=prompt ("enter your Number to check whether the no. is prime or not");
+
+function prime()
+{
+
+  if (n%2==0)
+  {
+    console.log(n,"Not a prime number");
+  }
+  else if(n%2==1)
+  {
+    console.log(n,"prime number");
+  }
+  
+}
+prime()
+
+     </script>
+     
+     
+     
+  
+<h3> Question No.8</h3>
+     <h4> Arrow function</h4>
+     <script type="text/javascript">
+console.log("Question No .8");
+  
+ let Ask = ()=> {
+    function ask(question,yes,no){
+        if(confirm(question)) yes()
+        
+  else no();
+  
+}
+ask(
+  " Do you agree ?",
+  function() {alert ("you agreed.");
+  console.log("Hello Friends");},
+  function () { alert("you cancel the execution.");
+    console.log("Byee Friends");
+  }
+ );
+  }
+  Ask();
+  
+     </script>
+     
+  
+  
+  </body>
+ </html
