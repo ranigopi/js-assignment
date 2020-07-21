@@ -1,0 +1,82 @@
+<html>
+  <head>
+    <title> Day 6 Assignment</title>
+     </head>
+  <body>
+   <h3> Question No.1 </h3>
+  <h4>List of flowers</h4>
+    <ul id="list">
+
+    </ul>
+      
+  <script type="text/javascript">
+  console.log("Question No.1");
+      let flowers = ['rose','sunflower','lotus','lily','daisy'];
+console.log(flowers);
+flowers.forEach(flowers=>{
+    
+    list.innerHTML += `<li>${flowers}
+    </li>`;
+})
+
+list.setAttribute('style','background-color:Yellow');
+ 
+ function changecolor(){
+   setTimeout(()=> {
+     document.body.style.backgroundColor="green";
+   },5000);
+ }
+ changecolor();
+ </script>
+      
+     
+ <h3> Question No. 2</h3>  
+ <script type="text/javascript">
+   var total;
+   var num =+prompt("Enter a number:");
+   for(var i=1,j=1;i<=10;i++,j++){
+  
+   {
+     total=i*num;
+     document.write(num+  "x"  + j+ "=" +  total+"<br>");}
+   }
+   
+  </script>
+  
+  
+  
+    <h3> Question No.3</h3>
+    <h4 id="time">  </h4>
+  <button id="dark">Switch to Dark Mode</button>
+    <script type="text/javascript">
+const name = prompt("Enter your name");
+
+document.write(`Welcome`,name);
+
+const ctime = document.getElementById('time');
+
+
+function clock(){
+    let date = new Date();
+    let time = date.toLocaleTimeString();
+    ctime.innerText = time;
+}
+
+ clock();
+
+setInterval(clock,1000);
+
+
+
+const dmode = document.getElementById('dark');
+
+dmode.onclick = function changeColor(){
+    
+    document.body.style.backgroundColor = 'black';
+    document.body.style.color = 'Orange';
+    document.body.style.fontFamily = 'Arial';
+   
+} 
+</script>
+   </body>
+</html>
